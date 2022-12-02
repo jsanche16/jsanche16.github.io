@@ -1,89 +1,197 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
-    <head>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-        <link href="styles.css" rel="stylesheet">
-        <title>Steam Tech Academy</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Steam Tech Academy</title>
 
-        <script>
-            // Run script once DOM is loaded
-            document.addEventListener('DOMContentLoaded', function(){
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/headers/">
 
-                // defines methods for correct and incorrect items
-                let correct = document.querySelector('.correct');
-                let incorrects = document.querySelectorAll('.incorrect');
+    
 
-                // When correct answer is clicked, change color to green
-                correct.addEventListener('click', function(){
-                    correct.style.backgroundColor = 'green';
-                    document.querySelector('#feedback1').innerHTML = 'Correct!';
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
-                    // This changes background color of incorrects back to default
-                    for (let i = 0; i < incorrects.length; i++) {
-                        incorrects[i].style.backgroundColor = '#d9edff';
-                    }
-                });
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
 
-                // When any incorrect answer is clickeed, change color to red
-                for (let i = 0; i < incorrects.length; i++) {
-                    incorrects[i].addEventListener('click', function() {
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
 
-                        // This changes background color of correct back to default
-                        correct.style.backgroundColor = '#d9edff';
-                        incorrects[i].style.backgroundColor = 'red';
-                        document.querySelector('#feedback1').innerHTML = 'Incorrect!';
-                    });
-                }
+    
+    <!-- Custom styles -->
+    <link href="styles.css" rel="stylesheet">
+    
+  </head>
+  <body>
 
-                // Check free response submission
-                document.querySelector('#check').addEventListener('click', function() {
-                    let input = document.querySelector('input');
-                    if (input.value.toLowerCase() === 'higuita') {
-                        input.style.backgroundColor = 'green';
-                        document.querySelector('#feedback2').innerHTML = 'Correct!';
-                    } else {
-                        input.style.backgroundColor = 'red';
-                        document.querySelector('#feedback2').innerHTML = 'Incorrect';
-                    }
-
-                });
-
-            });
-
-        </script>
-
-    </head>
-    <body>
-        <div class="header">
-            <h1>Welcome To Steam Tech Academy!</h1>
+     
+    <header>
+      <nav id="header" class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+        <div class="container-fluid">
+          <img id="logo" src="imgs/steam_tech_logo2.png" class="img" alt="">
+          <a class="navbar-brand pb-3" style="right: 200px;"></a>
+          <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse bg-light pb-3" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0"></ul>
+            <ul class="nav nav-pills">
+              <li class="nav-item"><a href="#home"  id="nav_home" class="nav-link" aria-current="page">Home</a></li>
+            </ul> 
+            <ul class="nav nav-pills"> 
+              <li class="nav-item"><a href="#about" id="nav_about" class="nav-link">About</a></li>
+            </ul> 
+            <ul class="nav nav-pills">   
+              <li class="nav-item"><a href="#enroll" id="nav_enroll" class="nav-link">Enroll Now</a></li>
+            </ul>
+          </div>
         </div>
+      </nav>
+    </header>
+    
+    <main>
+      
+      <!-- Body Section -->        
+      <!-- <div class="b-example-divider"></div> -->
+      
+      <!-- ======= Home Section ======= -->
+      <section class="d-flex align-items-center">
+        <div class="container-fluid">
+          <div class="row gy-4">
+            <img id="home" src="imgs/background1.jpg" class="img-fluid" alt="">
+            <img id="logo2" src="imgs/steam_tech_logo2.png" class="img-fluid" alt="">
+            
+          </div>
+          </div>
+        </section><!-- End Home -->
 
-        <div class="container">
-            <div class="section">
-                <h2>Part 1: Multiple Choice </h2>
-                <hr>
-                <h3>How many world cups has Brazil won?</h3>
 
-                <button class="incorrect">1</button>
-                <button class="incorrect">2</button>
-                <button class="incorrect">3</button>
-                <button class="incorrect">4</button>
-                <button class="correct">5</button>
+        <!-- ======= About Section ======= -->
+        <section id="about">
+          <div class="container text-center">
+            <h1>LEGO ROGOTICS WORKSHOP</h1>
+            <h4>CHILDREN IN GRADES 5th-8th</h4>
+          </div>
+        </section><!-- End About -->
 
-                <p id="feedback1"></p>
+
+        <!-- ======= Details Section ======= -->
+        <div class="container marketing">
+          <!-- Three columns of text below the carousel -->
+          <div class="row">
+            <div id="image_robot" class="col-lg-4">
+              <img src="imgs/robot.png" class="img-fluid" alt="" style="width:50%;">
+            </div><!-- /.col-lg-4 -->
+            <div id="details" class="col-lg-4">
+              <p><strong><font size="+3">ENROLLMENT DETAILS:</font></strong></p>
+              <p><strong><font size="+2">&#60&#60 12 Weekly Sessions &#62&#62</font></strong></p>
+              <p><strong><font size="+2">Space is limited!</font></strong></p>
+              <p><strong><font size="+1">Tuesdays or Fridays Sessions Available</font></strong></p>
+              <p><font size="+1"><strong>Dates:</strong> January 31 - May 5</font></p>
+              <p><font size="+1"><strong>Hours:</strong> 3:30-4:30pm</font></p>
+              <p><font size="+1"><strong>Location:</strong> IHM</font></p>
+              <p><font size="+1">No Classes on 4/4, 4/7, 4/11, 4/14</font></p>   
+            </div><!-- /.col-lg-4 -->
+            <div id="description" class="col-lg-4">
+              <p class="my-0 fw-normal"><font size="+2">Come and join us for lots of fun!</font></p>
+              <p><font size="+1">LEGO Robotics Workshop engages all students in thinking critically, 
+                analyzing data, and prototyping creative hands-on solutions for complex problems. From easy-entry lessons to advanced experiences, students of all learning levels 
+                build their confidence and resilience along with the 21st-century skills that are vital to their future success.
+              </font></p>
+            </div><!-- /.col-lg-4 -->
+          </div><!-- /.row -->
+        </div><!-- /.details --> 
+        
+        <!-- ======= Enroll Section ======= -->
+        <div id="enroll" class="container py-3">
+          <header>
+            <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+              <h1 class="display-4 fw-normal">Payment Options</h1>
             </div>
-
-            <div class="section">
-                <h2>Part 2: Free Response</h2>
-                <hr>
-                <h3>What is the last name of famous colombian goal keeper who did the scorpion kick?</h3>
-                <input type="text"></input>
-                <button id="check">Check Answer</button>
-
-                <p id="feedback2"></p>
-
+          </header>
+        
+          <main>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">3 Easy Installment Payments</h4>
+                  </div>
+                  <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Each payment only $100 ($300 total)</li>
+                      <li>Payments scheduled for Jan, Feb, and March</li>
+                      <li>REGISTRATION CLOSES ON 1/15</li>
+                    </ul>
+                    <a href="https://buy.stripe.com/9AQ03b2XVd4pdAk4gh" id="installment_pay" class="w-100 btn btn-lg">Enroll Now</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Single $270 Payment (10% OFF)</h4>
+                  </div>
+                  <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Best price</li>
+                      <li>Simple one time payment</li>
+                      <li>REGISTRATION CLOSES ON 1/15</li>
+                      <li></li>
+                    </ul>
+                    <a href="https://buy.stripe.com/5kAg29gOL6G1cwgcMM" id="full_pay" class="w-100 btn btn-lg">Enroll Now</a>
+            
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">$270 Cash or Check (10% OFF)</h4>
+                  </div>
+                  <div class="card-body">
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Please fill out form</li>
+                      <li>Leave check or cash at front office</li>
+                      <li>REGISTRATION CLOSES ON 1/15</li>
+                      <li></li>
+                    </ul>
+                    <a href="./pdfs/registration_form.pdf" id="installment_pay" class="w-100 btn btn-lg">Registration Form</a>
+            
+                  </div>
+                </div>
+              </div>
             </div>
+      
+        </section><!-- End Enroll -->
+  
+        <!-- Footer Section -->        
+        <div class="container-fluid">
+            <footer class="py-3 my-3">
+                <ul class="nav justify-content-center border-bottom border-top pb-3 mb-3">
+                    <li class="nav-item"><a href="#home" class="nav-link px-2 text-muted">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link px-2 text-muted">About</a></li>
+                    <li class="nav-item"><a href="#enroll" class="nav-link px-2 text-muted">Enroll Now</a></li>
+                </ul>
+                <p class="text-center text-muted">Steam Tech Academy</p>
+            </footer>
         </div>
-    </body>
+    </main>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+        
+  </body>
 </html>
