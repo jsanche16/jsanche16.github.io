@@ -352,9 +352,29 @@
     color: #fff;
   }
 
+  .size_3 {
+    font-size: 32px;
+    line-height: 60px;
+  }
+
+  .size_2 {
+    font-size: 25px;
+    line-height: 50px;
+  }
+  
+  .size_1 {
+    font-size: 16px;
+    line-height: 50px;
+  }
+
   #installment_pay {
     background: #fff;
     color: #eb5d1e;
     border-color: #eb5d1e;
   }
-  
+
+  #cash_pay {
+    background: #fff;
+    color: #eb5d1e;
+    border-color: #eb5d1e;
+  }
