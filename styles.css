@@ -307,7 +307,7 @@
     text-align: center;
     line-height: 20px;
     color: #078099;
-  }
+}
 
 .marketing #image_robot {
     margin-bottom: 1.5rem;
@@ -315,16 +315,15 @@
     border-radius: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
-  }
+}
 
 .marketing #details {
     margin-bottom: 1.5rem;
-    text-align: center;
-    line-height: 20px;
+    text-align: center
     border-radius: 30px;
     padding-top: 50px;
     padding-bottom: 10px;
-  }
+}
 
 .marketing #description {
     margin-bottom: 1.5rem;
@@ -335,46 +334,50 @@
     background: #eb5d1e;
     border-radius: 30px;
     padding-top: 5%;
-  }
+}
 
-  .marketing h2 {
+.marketing h2 {
     font-weight: 400;
-  }
-  /* rtl:begin:ignore */
-  .marketing .col-lg-4 p {
+}
+/* rtl:begin:ignore */
+.marketing .col-lg-4 p {
     margin-right: .75rem;
     margin-left: .75rem;
     line-height: 20px;
-  }
+}
 
-  #full_pay {
+#full_pay {
     background: #eb5d1e;
     color: #fff;
-  }
+}
 
-  .size_3 {
-    font-size: 32px;
-    line-height: 60px;
-  }
+.size_3 {
+    font-size: 30px;
+}
 
-  .size_2 {
+.size_2 {
     font-size: 25px;
     line-height: 50px;
   }
   
   .size_1 {
-    font-size: 16px;
-    line-height: 50px;
-  }
-
-  #installment_pay {
+      font-size: 16px;
+      line-height: 50px;
+    }
+    
+    #installment_pay {
     background: #fff;
     color: #eb5d1e;
     border-color: #eb5d1e;
   }
-
+  
   #cash_pay {
-    background: #fff;
-    color: #eb5d1e;
-    border-color: #eb5d1e;
-  }
+      background: #fff;
+      color: #eb5d1e;
+      border-color: #eb5d1e;
+    }
+    @media (max-width: 1200px) {
+      .size_3 {
+        font-size: 20px;
+      }
+    }
